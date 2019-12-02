@@ -124,6 +124,13 @@ mustang.drive();
 
 // CODE HERE...
 
+String.prototype.grammarPolice = function() {
+    let str = arguments[0];
+    if (!str || typeof str !== 'string') {
+        return 'Invalid';
+    }
+    return str.split(' ').map(word=>word[0] + word.slice(1).toLowerCase()).join(' ');
+}
 
 
 // *************
