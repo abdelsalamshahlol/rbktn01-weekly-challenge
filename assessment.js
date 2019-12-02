@@ -134,6 +134,9 @@ String.prototype.grammarPolice = function() {
     return str.split(' ').map(word => word[0] + word.slice(1).toLowerCase()).join(' ');
 }
 
+var test = String.prototype.grammarPolice.call(this, 'OH HELLO THERE');
+
+// console.log(test);
 
 // *************
 // * PROBLEM 4 *
