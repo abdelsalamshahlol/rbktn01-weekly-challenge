@@ -154,6 +154,18 @@ var test = String.prototype.grammarPolice.call(this, 'OH HELLO THERE');
 
 // CODE HERE...
 
+var valueType = function(arg1, arg2) {
+    let result = 'Different values';
+
+    if (arg1 === arg2) {
+        result = 'Exactly the same';
+    } else if (arg1 == arg2) {
+        result = 'Same value, different types';
+    }
+
+    return result;
+}
+
 // *************
 // * PROBLEM 5 *
 // *************
