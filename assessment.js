@@ -191,7 +191,7 @@ function large() {
     return 'My name is ' + this.name + ' and I am very heavy!'
 }
   // CODE HERE...
-  
+
 var boundToElephant = large.bind(elephant);
 // console.log(boundToElephant());
 
@@ -207,6 +207,23 @@ var boundToElephant = large.bind(elephant);
 // and return the bound function.
 
 // CODE HERE...
+
+var deathStar = function(capacity, crew) {
+    return capacity.bind(crew);
+}
+
+var crew = {
+    1: 'Adam',
+    2: 'Ben',
+    3: 'Kaye',
+}
+
+var theCrew = function() {
+    return "The crew are: " + Object.values(crew).reduce((acc,member)=>acc + ", " + member);
+}
+
+var showCrew = deathStar(theCrew, crew);
+// console.log(showCrew());
 
 
 // *************
