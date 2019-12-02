@@ -238,3 +238,14 @@ var showCrew = deathStar(theCrew, crew);
 // The closure function will return the combined value of assets and liabilities.
 
 // CODE HERE...
+
+var accountingOffice = function(assets) {
+    let sum = 0;
+    sum += assets;
+
+    function liabilities(number) {
+        sum += number;
+        console.log(sum);
+    }
+    return liabilities;
+}
