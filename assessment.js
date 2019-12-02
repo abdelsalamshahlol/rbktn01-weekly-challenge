@@ -191,6 +191,10 @@ function large() {
     return 'My name is ' + this.name + ' and I am very heavy!'
 }
   // CODE HERE...
+  
+var boundToElephant = large.bind(elephant);
+// console.log(boundToElephant());
+
 
 // *************
 // * PROBLEM 6 *
