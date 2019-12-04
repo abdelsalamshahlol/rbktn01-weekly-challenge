@@ -43,7 +43,7 @@ function daBears() {
 // Which function(s) access the "chair" variable and get "Too Big!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale1 = ["papaBear", "mamaBear", "babyBear"];
+var fairyTale1 = ["papaBear", "mamaBear"];
 
 // Which function(s) access the "feeling" variable and get "Hungry"
 // (Delete wrong answers, leave correct ones)
@@ -53,17 +53,17 @@ var fairyTale2 = ["goldilocks"];
 // Which function(s) access the "porridge" variable and get "Too Cold!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale3 = ["mamaBear", "babyBear"];
+var fairyTale3 = ["mamaBear"];
 
 // Which function(s) access the "sleepy" variable and get undefined
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale4 = ["babyBear"];
+var fairyTale4 = [];
 
 // Which function(s) access the isFurry variable and get true
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale5 = ["goldilocks"];
+var fairyTale5 = ["papaBear", "mamaBear"];
 
 
 // *************
@@ -125,16 +125,9 @@ mustang.drive();
 // CODE HERE...
 
 String.prototype.grammarPolice = function() {
-    let str = arguments[0];
-
-    if (!str || typeof str !== 'string') {
-        return 'Invalid';
-    }
-
-    return str.split(' ').map(word => word[0] + word.slice(1).toLowerCase()).join(' ');
+    return Object.values(this).join('').split(' ').map(word => word[0] + word.slice(1).toLowerCase()).join(' ');
 }
-
-var test = String.prototype.grammarPolice.call(this, 'OH HELLO THERE');
+'OH HELLO THERE'.grammarPolice();
 
 // console.log(test);
 
